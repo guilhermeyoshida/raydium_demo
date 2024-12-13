@@ -1,0 +1,34 @@
+[package]
+name = "raydium_demo"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+devnet = [
+  "amm-cli/devnet",
+  "clmm-cli/devnet",
+  "cpswap-cli/devnet",
+  "common/devnet",
+]
+
+[dependencies]
+raydium_amm = { git = "https://github.com/raydium-io/raydium-amm", default-features = false, features = [
+  "client",
+  "no-entrypoint",
+] }
+amm-cli = { git = "https://github.com/raydium-io/raydium-library" }
+clmm-cli = { git = "https://github.com/raydium-io/raydium-library" }
+cpswap-cli = { git = "https://github.com/raydium-io/raydium-library" }
+common = { git = "https://github.com/raydium-io/raydium-library" }
+spl-token = { version = "4.0.0", features = ["no-entrypoint"] }
+spl-associated-token-account = { version = "2.2.0", features = [
+  "no-entrypoint",
+] }
+spl-token-2022 = { version = "0.9.0", features = ["no-entrypoint"] }
+solana-client = "<1.17.0"
+solana-sdk = "<1.17.0"
+anyhow = "1.0.53"
+clap = { version = "4.5.23", features = ["derive"] }
+log = "0.4.22"
+env_logger = "0.11.5"
+thiserror = "2.0.6"

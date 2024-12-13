@@ -1,0 +1,4 @@
+[env]
+SOLANA_CLUSTER_URL = "https://api.mainnet-beta.solana.com"
+SOLANA_WEBSOCKET_URL = "wss://api.mainnet-beta.solana.com"
+SOLANA_WALLET = "~/.config/solana/id.json"
