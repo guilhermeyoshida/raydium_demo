@@ -86,7 +86,7 @@ cargo run -- --help
 
 2. Run the Command:
    ```bash
-   cargo run -- add AMM_ID AMOUNT
+   cargo run -- remove AMM_ID AMOUNT
 
 ---
 
