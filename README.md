@@ -30,7 +30,7 @@ A command-line tool to interact with Raydium AMM pools on the Solana blockchain.
 ## Installation
 
 1. Clone the Repository:
-   git clone https://github.com/yourusername/raydium-liquidity-cli.git
+   git clone https://github.com/guilhermeyoshida/raydium-liquidity-cli.git
    cd raydium-liquidity-cli
 
 2. Build the Project:
