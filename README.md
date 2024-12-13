@@ -55,10 +55,6 @@ A command-line tool to interact with Raydium AMM pools on the Solana blockchain.
    ```bash
   solana config set --url https://api.mainnet-beta.solana.com
 
-  For devnet:
-   ```bash
-  solana config set --url devnet
-
 ---
 
 ## Usage
