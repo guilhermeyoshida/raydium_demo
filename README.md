@@ -30,8 +30,9 @@ A command-line tool to interact with Raydium AMM pools on the Solana blockchain.
 ## Installation
 
 1. Clone the Repository:
+   ```bash
    git clone https://github.com/guilhermeyoshida/raydium_demo.git
-   cd raydium-liquidity-cli
+   cd raydium_demo
 
 2. Build the Project:
    cargo build
@@ -46,13 +47,16 @@ A command-line tool to interact with Raydium AMM pools on the Solana blockchain.
 
 - `SOLANA_WALLET` (optional):  
   By default, the application uses `~/.config/solana/id.json` as the keypair. To specify a custom keypair path:
+   ```bash
   export SOLANA_WALLET=~/.config/solana/custom-id.json
 
 - Solana Cluster:  
   Ensure the Solana CLI is configured for the correct network:
+   ```bash
   solana config set --url https://api.mainnet-beta.solana.com
 
   For devnet:
+   ```bash
   solana config set --url devnet
 
 ---
@@ -70,7 +74,8 @@ cargo run -- --help
    Obtain the pool’s `ammId`, `coinMint`, `pcMint`, and `lpMint` from Raydium’s official pool configuration data.
 
 2. Run the Command:  
-   cargo run -- add <AMM_ID> <AMOUNT>
+   ```bash
+   cargo run -- add AMM_ID AMOUNT
 
 ---
 
@@ -79,8 +84,9 @@ cargo run -- --help
 1. Check LP Balance:  
    Ensure your LP ATA holds LP tokens from the pool.
 
-2. Run the Command:  
-   cargo run -- add <AMM_ID> <AMOUNT>
+2. Run the Command:
+   ```bash
+   cargo run -- add AMM_ID AMOUNT
 
 ---
 
