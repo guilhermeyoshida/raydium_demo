@@ -38,9 +38,6 @@ A command-line tool to interact with Raydium AMM pools on the Solana blockchain.
 
    Once the build completes, the binary will be located in `target/debug`.
 
-3. (Optional) Run Tests:
-   cargo test
-
 ---
 
 ## Configuration
@@ -72,23 +69,8 @@ cargo run -- --help
 1. Identify Pool Information:  
    Obtain the pool’s `ammId`, `coinMint`, `pcMint`, and `lpMint` from Raydium’s official pool configuration data.
 
-2. Create Associated Token Accounts (ATAs):  
-   For each mint, create or fetch its associated token account:
-   spl-token create-account <COIN_MINT>
-   spl-token create-account <PC_MINT>
-   spl-token create-account <LP_MINT>
-   Record the ATAs returned by these commands.
-
-3. Update the Code:  
-   In your `Deposit` command configuration, set:
-   - deposit_token_coin = Some(<YOUR_COIN_ATA>)
-   - deposit_token_pc = Some(<YOUR_PC_ATA>)
-   - recipient_token_lp = Some(<YOUR_LP_ATA>)
-
-4. Run the Command:  
-   cargo run -- --group-tx add \
-     --pool-id <AMM_ID> \
-     --amount <AMOUNT>
+2. Run the Command:  
+   cargo run -- add <AMM_ID> <AMOUNT>
 
 ---
 
@@ -98,10 +80,7 @@ cargo run -- --help
    Ensure your LP ATA holds LP tokens from the pool.
 
 2. Run the Command:  
-   cargo run -- --group-tx remove \
-     --pool-id <AMM_ID> \
-     --amount <AMOUNT> \
-     --slippage-limit <SLIPPAGE_LIMIT>
+   cargo run -- add <AMM_ID> <AMOUNT>
 
 ---
 
